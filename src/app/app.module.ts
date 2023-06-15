@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeesListComponent } from './Components/Employees/employees-list/employees-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddEmployeeComponent } from './Components/Employees/add-employee/add-employee.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,11 +14,14 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     EmployeesListComponent,
+    AddEmployeeComponent,
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

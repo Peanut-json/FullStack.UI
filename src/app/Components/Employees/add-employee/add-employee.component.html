@@ -1,0 +1,42 @@
+<div class = "container  my-5"> 
+  <h2 class = "mb-3">Add New Employees</h2>
+
+  <div class="row">
+    <div class ="col-lg-9">
+      <form action=""> 
+        <form #form ="ngForm" (ngSubmit)="addEmployee()">
+          <div class="mb-3">
+            <label for="name" class="lead">Name</label>
+            <input type="text" class="form-control" id="name " aria-describedby="name" 
+            name="name" [(ngModel)] = "addEmployeeRequest.name">
+            <div id="helper" class="form-text"> When adding always remember to use capitals for starting names.</div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="lead" >Email</label>
+            <input type="email" class="form-control" id="email " aria-describedby="email"
+            name="email" [(ngModel)] = "addEmployeeRequest.email">
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="lead">Phone</label>
+            <input type="number" class="form-control" id="phone " aria-describedby="phone"
+            name="phone" [(ngModel)] = "addEmployeeRequest.phone">
+            <div id="helperphone" class="form-text">Do not add 0 before first number </div>
+          </div>
+          <div class="mb-3">
+            <label for="salary" class="lead">Salary</label>
+            <input type="number" class="form-control" id="salary" aria-describedby="salary"
+            name="salary" [(ngModel)] = "addEmployeeRequest.salary">
+          </div>
+          <div class="mb-3">
+            <label for="department" class="lead">Department</label>
+            <input type="text" class="form-control" id="department " aria-describedby="department"
+            name="department" [(ngModel)] = "addEmployeeRequest.department">
+          </div>
+          <!-- the list of perameters we have assigned for the object-->
+          <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+      </form>
+    </div>
+  </div >
+</div>

@@ -19,4 +19,5 @@ export class EmployeesService {
   }
 }
 // this getAllEmployees method will return a observable that can be mapped ot the Employee arry object so when the data is sent through it wil mapp to the arry and insert itself automatically. 
+// any use of < > is a form of mapping to a object , for this we are mapping this method to the Employee[] array object
 
