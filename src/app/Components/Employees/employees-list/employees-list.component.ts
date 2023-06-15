@@ -1,45 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit, inject } from '@angular/core';
 import { Employee } from 'src/app/Models/employee.model';
+import { EmployeesService } from 'src/app/services/employees.service';
 
 @Component({
   selector: 'app-employees-list',
   templateUrl: './employees-list.component.html',
   styleUrls: ['./employees-list.component.scss']
 })
+
 export class EmployeesListComponent implements OnInit {
 
-  employees: Employee [] = [
-    {
-      id:"1",
-      name:'Billy',
-      email: 'billy@hotmail.com',
-      phone:798653537647,
-      salary:50000,
-      department:'IT  '
-    },
-    {
-      id:"2",
-      name:'Sarah',
-      email: 'Sarah@hotmail.com',
-      phone:79869248982,
-      salary:200000,
-      department:'IT  '
-    },
-    {
-      id:"3",
-      name:'Matty',
-      email: 'Matty@hotmail.com',
-      phone:793896474747,
-      salary:4000000,
-      department:'IT  '
-    },
-  ];
+  employees: Employee[] = [];
+
 // static employee list to use instead of .net API , when implimented this will be removed. 
+  constructor(private employeesService: EmployeesService ) { }
 
-  constructor() { }
+  ngOnInit(): void { 
+    this.employeesService.getAllEmployees()
+    .subscribe({
+    next: (employees) => {
 
-  ngOnInit(): void {
-   
+      this.employees = employees  // taking the value of responce and populating it into a variable.
+
+      console.log(employees);
+    },
+    // loading the responce to the console aswell as the Error repsonce to the console also 
+    error: (response) => {
+       console.log(response);
+    }
+    
+    })
   }
 
 }

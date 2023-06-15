@@ -21,7 +21,13 @@
     "lib": [
       "es2020",
       "dom"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@angular",
+      "node_modules/@angular/common/http",
     ]
+    // inserted type roots in order to help with getting libs for databases. 
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
