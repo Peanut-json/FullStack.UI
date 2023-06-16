@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Employee } from 'src/app/Models/employee.model';
+import { EmployeesService } from 'src/app/services/employees.service';
 
 @Component({
   selector: 'app-add-employee',
@@ -19,11 +21,21 @@ export class AddEmployeeComponent implements OnInit {
   }
 
 
-  constructor() { }
+  constructor(private employeeService: EmployeesService , private router:Router) { }
 
   ngOnInit(): void {
   }
+
+
+
+  //**AddEmployee function to add new employees 
   addEmployee() {
-    console.log(this.addEmployeeRequest);
+   this.employeeService.addEmployee(this.addEmployeeRequest) //* remember to never ; this since this needs to subscribe to observable.
+   .subscribe({
+    next: (employee) => {
+     this.router.navigate(['employees'])
+    }
+   });
   }
 }
+
