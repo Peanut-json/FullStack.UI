@@ -18,14 +18,19 @@
             <!-- table for each section made in via interface -->
             <!-- using a ng forLoop to repeat over as I need for the data to flow inot the coloums -->
             <tr *ngFor="let employee of employees">
+                 
                 <td>{{employee.id}}</td>
                 <td>{{employee.name}}</td>
                 <td>{{employee.email}}</td>
                 <td>{{employee.phone}}</td>
                 <td>{{employee.salary}}</td>
                 <td>{{employee.department}}</td>
+                <th><a  [routerLink]="['/employees', 'edit', 'employee.id']">view</a></th> 
+                <!-- * this is using the anchor tool to create a clickable event handler named view-->
+
                 <!-- this is using data binding to get the infomation we need form the objects made for static virsions.  -->
             </tr>
+            
 
         </tbody>
     </table>

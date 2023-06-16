@@ -7,6 +7,7 @@ import { EmployeesListComponent } from './Components/Employees/employees-list/em
 import { HttpClientModule } from '@angular/common/http';
 import { AddEmployeeComponent } from './Components/Employees/add-employee/add-employee.component';
 import { FormsModule } from '@angular/forms';
+import { EditEmployeeComponent } from './Components/Employees/edit-employee/edit-employee.component';
 
 
 
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     EmployeesListComponent,
     AddEmployeeComponent,
+    EditEmployeeComponent,
     ],
   imports: [
     BrowserModule,

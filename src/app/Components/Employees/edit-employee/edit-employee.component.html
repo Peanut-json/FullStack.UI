@@ -1,0 +1,45 @@
+<div class = "container  my-5"> 
+    <h2 class = "mb-3">Edit Employees</h2>
+  
+    <div class="row">
+      <div class ="col-lg-9">
+        <form action=""> 
+          <form #form ="ngForm">
+            <div class="mb-3">
+                <label for="id" class="lead">Id</label>
+                <input type="text" class="form-control" id="id"  readonly aria-describedby="id" 
+                name="name" [(ngModel)] = "employeeDetails.id">
+              </div>
+            <div class="mb-3">
+              <label for="name" class="lead">Name</label>
+              <input type="text" class="form-control" id="name " aria-describedby="name" 
+              name="name" [(ngModel)] = "employeeDetails.name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="lead" >Email</label>
+              <input type="email" class="form-control" id="email " aria-describedby="email"
+              name="email" [(ngModel)] = "employeeDetails.email">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="lead">Phone</label>
+              <input type="number" class="form-control" id="phone " aria-describedby="phone"
+              name="phone" [(ngModel)] = "employeeDetails.phone">
+
+            </div>
+            <div class="mb-3">
+              <label for="salary" class="lead">Salary</label>
+              <input type="number" class="form-control" id="salary" aria-describedby="salary"
+              name="salary" [(ngModel)] = "employeeDetails.salary">
+            </div>
+            <div class="mb-3">
+              <label for="department" class="lead">Department</label>
+              <input type="text" class="form-control" id="department " aria-describedby="department"
+              name="department" [(ngModel)] = "employeeDetails.department">
+            </div>
+            <!-- the list of perameters we have assigned for the object-->
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </form>
+      </div>
+    </div >
+  </div>

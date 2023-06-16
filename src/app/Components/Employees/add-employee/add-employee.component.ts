@@ -36,6 +36,8 @@ export class AddEmployeeComponent implements OnInit {
      this.router.navigate(['employees'])
     }
    });
+
+   
   }
 }
 
