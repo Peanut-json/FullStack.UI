@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class EmployeesService {
 
 
-  baseApiUrl : string = environment.baseAPIUrl; // * this is creating a link between the enviroment baseAPI to there to use in our method 
+  baseApiUrl: string = environment.baseAPIUrl; // * this is creating a link between the enviroment baseAPI to there to use in our method 
 
   constructor(private http: HttpClient) { }
 
@@ -23,16 +23,20 @@ export class EmployeesService {
   }
 
   //* this is a function that will pass our service to the API. 
+  
  addEmployee(addEmployeeRequest: Employee):Observable<Employee>{
- return this.http.post<Employee>(this.baseApiUrl + '/api/employees',addEmployeeRequest)
+ return this.http.post<Employee>(this.baseApiUrl + '/api/employees', addEmployeeRequest)
  }
+
+
+
  //* for the post request breakdown :
   //* we create a addEmployee method that takes in addEmployee request that OFTYPE Employee.
   //* we then return this.http.**post** since this si a post request not a GET. We map it to the Employee interface and this will then POST to the Database we have created in .NET ( this being the variable string we created that links to the API.) and alos the bosy of the design pattern. 
   //*the method is then made into a Observable and mapped to the Employee interface
 
 
- getEmployee(id: string): Observable<Employee>{
+ getEmployee(id:string):Observable<Employee>{
   return this.http.get<Employee>(this.baseApiUrl + '/api/employees/' + id)
  }
 

@@ -12,7 +12,7 @@ export class EditEmployeeComponent implements OnInit {
 
 
   employeeDetails: Employee = {
-    id: '',
+    id:'',
     name:'',
     email:'',
     phone: 0,
@@ -39,5 +39,6 @@ export class EditEmployeeComponent implements OnInit {
       }
     })
   }
+  
 
 }
