@@ -9,8 +9,12 @@ import { EmployeesService } from 'src/app/services/employees.service';
 })
 
 export class EmployeesListComponent implements OnInit {
+deleteEmployee(arg0: any) {
+throw new Error('Method not implemented.');
+}
 
   employees: Employee[] = [];
+employeeDetails: any;
 
 // static employee list to use instead of .net API , when implimented this will be removed. 
   constructor(private employeesService:EmployeesService ) { }

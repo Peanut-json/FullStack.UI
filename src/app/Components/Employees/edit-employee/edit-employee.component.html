@@ -4,7 +4,7 @@
     <div class="row">
       <div class ="col-lg-9">
         <form action=""> 
-          <form #form ="ngForm">
+          <form #form ="ngForm" (ngSubmit)="updateEmployee()">
             <div class="mb-3">
                 <label for="id" class="lead">Id</label>
                 <input type="text" class="form-control" id="id"  readonly aria-describedby="id" 
@@ -38,6 +38,8 @@
             </div>
             <!-- the list of perameters we have assigned for the object-->
             <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-danger" 
+            (click)="deleteEmployee(employeeDetails.id)">Delete</button>
           </form>
         </form>
       </div>

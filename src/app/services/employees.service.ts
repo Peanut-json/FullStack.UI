@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Employee } from '../Models/employee.model';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -41,8 +42,23 @@ export class EmployeesService {
  }
 
 
+ //* using the update method taking two perameters of id  and updateEmployeeRequest , this is then set to ofType Observable and mapped to Employee,
+
+//* this is then returned with a HTTP put request mapped to Employee and using the same baseUrl and pathing along ,
+//* with the body of the new updateEmpEmployeeRequest. 
+
+ updateEmpoloyee(id:string ,updateEmployeeRequest: Employee):Observable<Employee>{
+
+  return this.http.put<Employee>(this.baseApiUrl + '/api/employees/' + id , updateEmployeeRequest);
+ }
 
 
+
+
+ //* 
+  deleteEmployee(id:string ):Observable<Employee> {
+    return this.http.delete<Employee>(this.baseApiUrl + '/api/employees/' + id ,)
+  }
 
 
 
