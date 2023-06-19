@@ -4,11 +4,11 @@
   <div class="row">
     <div class ="col-lg-9">
       <form action=""> 
-        <form #form ="ngForm" (ngSubmit)="addEmployee()">
+        <form #form ="ngForm" (ngSubmit)="addEmployee()"> <!--* using the addEmployee method form services-->
           <div class="mb-3">
             <label for="name" class="lead">Name</label>
             <input type="text" class="form-control" id="name " aria-describedby="name" 
-            name="name" [(ngModel)] = "addEmployeeRequest.name">
+            name="name" [(ngModel)] = "addEmployeeRequest.name"> <!--* using ngModel to link the table data to the right location-->
             <div id="helper" class="form-text"> When adding always remember to use capitals for starting names.</div>
           </div>
           <div class="mb-3">

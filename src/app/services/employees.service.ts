@@ -55,7 +55,10 @@ export class EmployeesService {
 
 
 
- //* 
+ //*  this method deletes Employees form database , we use the id as a identifier and we return, 
+ //* the HTTP  DELETE request mapped to Employee interface with the URL base and the pathing. 
+//* we then set this as a observable and map this to Employee also. 
+
   deleteEmployee(id:string ):Observable<Employee> {
     return this.http.delete<Employee>(this.baseApiUrl + '/api/employees/' + id ,)
   }
