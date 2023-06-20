@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { combineLatest } from 'rxjs';
 import { EmployeesListComponent } from './Components/Employees/employees-list/employees-list.component';
 import { AddEmployeeComponent } from './Components/Employees/add-employee/add-employee.component';
 import { EditEmployeeComponent } from './Components/Employees/edit-employee/edit-employee.component';
